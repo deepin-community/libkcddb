@@ -1,0 +1,674 @@
+libkcddb (4:21.08.0-1) unstable; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (21.08.0).
+
+ -- Norbert Preining <norbert@preining.info>  Mon, 16 Aug 2021 16:34:24 +0900
+
+libkcddb (4:21.04.0-1) experimental; urgency=medium
+
+  [ Norbert Preining ]
+  * New upstream release (21.04.0).
+  * Borrow minimal upstream signing key from k3b.
+  * Drop Kubuntu from maintainer name.
+  * Added myself to the uploaders.
+  * Update list of installed files.
+
+ -- Norbert Preining <norbert@preining.info>  Wed, 28 Apr 2021 14:19:41 +0900
+
+libkcddb (4:20.12.0-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints.
+    + kde-config-cddb, libkf5cddb-dev: Add Multi-Arch: same.
+
+  [ Aurélien COUDERC ]
+  * New upstream release (20.12.0).
+  * Update build dependencies according to the upstream build system:
+    - cmake >= 3.5
+  * Drop kde-l10n migration rules, not needed anymore after 2 stable releases.
+  * Refresh copyright information.
+  * Bump Standards-Version to 4.5.1, no change required.
+  * Refresh upstream metadata.
+  * Update project homepage.
+  * Removed Maximiliano Curia from the uploaders, thanks for your work
+    on the package!
+  * Build with hardening=+all build hardening flag.
+  * Borrow minimal upstream signing key from k3b.
+
+ -- Aurélien COUDERC <coucouf@debian.org>  Mon, 04 Jan 2021 23:34:25 +0100
+
+libkcddb (4:20.08.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Bump the debhelper compatibility to 13:
+    - switch the debhelper-compat build dependency to 13
+  * Drop libkf5cddbwidgets5, as it was removed upstream.
+
+ -- Pino Toscano <pino@debian.org>  Sat, 15 Aug 2020 09:26:13 +0200
+
+libkcddb (4:20.04.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update watch file to the new release-service location.
+  * Update the build dependencies according to the upstream build system:
+    - bump cmake to 3.5
+    - explicitly add gettext
+  * Switch from dhmk to the dh sequencer:
+    - invoke the dh sequencer using the kf5, and pkgkde_symbolshelper addons
+    - call the right debhelper command instead of $(overridden_command)
+    - manually force the generation of the substvars for the kde-l10n breaks,
+      and the strict shlibs handling
+  * Bump the debhelper compatibility to 12:
+    - switch the debhelper build dependency to debhelper-compat 12
+    - remove debian/compat
+    - stop passing --fail-missing to dh_missing, as it is the default now
+  * Add Rules-Requires-Root: no.
+  * Bump Standards-Version to 4.5.0, no changes required.
+  * Add the configuration for the CI on salsa.
+  * Update symbols file.
+
+ -- Pino Toscano <pino@debian.org>  Sun, 02 Aug 2020 16:40:16 +0200
+
+libkcddb (4:19.08.1-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Switch Vcs-* fields to salsa.debian.org.
+  * Use https for Format in copyright.
+  * Bump the debhelper compatibility to 11:
+    - bump the debhelper build dependency to 11~
+    - bump compat to 11
+  * Add Multi-Arch annotations.
+  * Drop the 'testsuite' autopkgtest, as it does not test the installed
+    packages.
+  * Drop the migration from libkcddb-dbg, no more needed after two Debian
+    stable releases.
+  * Pass -DBUILD_TESTING=OFF to cmake to disable the build of tests, as they
+    are not run at build time anyway.
+  * Update symbols files.
+  * Bump Standards-Version to 4.4.0, no changes required.
+
+ -- Pino Toscano <pino@debian.org>  Sun, 29 Sep 2019 09:32:29 +0200
+
+libkcddb (4:17.08.3-3) unstable; urgency=medium
+
+  * Update symbols files.
+
+ -- Pino Toscano <pino@debian.org>  Thu, 28 Dec 2017 17:24:36 +0100
+
+libkcddb (4:17.08.3-2) unstable; urgency=medium
+
+  * Upload to unstable.
+  * Add symbols files for libkf5cddb5, and libkf5cddbwidgets5.
+  * Bump Standards-Version to 4.1.3, no changes required.
+  * Adjust l10npkgs_firstversion_ok to the version where kde-l10n will
+    drop translations.
+
+ -- Pino Toscano <pino@debian.org>  Thu, 28 Dec 2017 14:07:44 +0100
+
+libkcddb (4:17.08.3-1) experimental; urgency=medium
+
+  [ Maximiliano Curia ]
+  * New upstream release (17.08.1):
+    - switches to Qt5/KF5 (Closes: #875013)
+  * Bump Standards-Version to 4.0.1.
+  * Update upstream metadata
+  * Update build-deps and deps with the info from cmake
+  * Bump Standards-Version to 4.1.0.
+
+  [ Pino Toscano ]
+  * New upstream release.
+  * Bump Standards-Version to 4.1.2, no changes required.
+  * Simplify watch file, and switch it to https.
+  * Remove extra kde-l10n breaks/replaces, already included in ${kde-l10n:all}.
+  * Remove breaks/replaces on old libkf5cddb5, since they were never part of
+    the Debian archive.
+  * Invoke dh_install with --fail-missing, so there is no risk of forgetting
+    files.
+  * Tighten inter-packages dependencies.
+
+ -- Pino Toscano <pino@debian.org>  Mon, 18 Dec 2017 10:35:30 +0100
+
+libkcddb (4:17.08.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Tue, 05 Sep 2017 14:04:44 +0000
+
+libkcddb (4:17.08.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Thu, 17 Aug 2017 09:40:21 +0000
+
+libkcddb (4:17.04.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 12 Jul 2017 10:24:18 +0000
+
+libkcddb (4:17.04.2-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 07 Jun 2017 12:23:57 +0000
+
+libkcddb (4:17.04.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Thu, 11 May 2017 18:25:15 +0000
+
+libkcddb (4:17.04.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 19 Apr 2017 13:06:35 +0000
+
+libkcddb (4:16.12.3-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 08 Mar 2017 13:50:46 +0000
+
+libkcddb (4:16.12.2-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 08 Feb 2017 17:03:12 +0000
+
+libkcddb (4:16.12.1-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 11 Jan 2017 13:23:34 +0000
+
+libkcddb (4:16.12.0-0neon) xenial; urgency=medium
+
+  * New release
+
+ -- Neon CI <neon@kde.org>  Wed, 18 May 2016 18:45:42 +0200
+
+libkcddb (4:16.08.3-1) unstable; urgency=medium
+
+  [ Automatic packaging ]
+  * Refresh patches
+  * Update symbols files with the buildds logs.
+
+  [ Maximiliano Curia ]
+  * New upstream release (16.08.3)
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 23 Nov 2016 21:18:13 +0100
+
+libkcddb (4:16.08.0-2) unstable; urgency=medium
+
+  [ Automatic packaging ]
+  * Update symbols files with the buildds results
+
+  [ Maximiliano Curia ]
+  * New upstream release (16.08.2)
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 19 Oct 2016 12:34:36 +0200
+
+libkcddb (4:16.08.0-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Pino Toscano <pino@debian.org>  Sun, 28 Aug 2016 07:35:36 +0200
+
+libkcddb (4:15.12.2-2) unstable; urgency=medium
+
+  [ Rohan Garg ]
+  * New upstream release
+
+  [ Automatic packaging ]
+  * Bump Standards-Version to 3.9.8
+  * Migrate dbg package to automatic dbgsym
+
+  [ Maximiliano Curia ]
+  * Add upstream metadata (DEP-12)
+  * debian/control: Update Vcs-Browser and Vcs-Git fields
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 21 May 2016 23:44:38 +0200
+
+libkcddb (4:15.08.0-1) unstable; urgency=medium
+
+  * New upstream release (15.08.0).
+
+ -- Maximiliano Curia <maxy@debian.org>  Sat, 19 Sep 2015 19:10:49 +0200
+
+libkcddb (4:15.04.1-2) unstable; urgency=medium
+
+  * Update symbols files. (Closes: #777949)
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 10 Aug 2015 12:25:46 +0200
+
+libkcddb (4:15.04.1-1) unstable; urgency=medium
+
+  * New upstream release (15.04.0).
+  * New upstream release (15.04.1).
+  * Update symbols files from buildds logs (4:14.12.2-1).
+  * New patch: libmusicbrainz5cc.patch (Closes: #791884)
+  * Bump build depends of libmusicbrainz5-dev to 5.1.0+git20150707~
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 10 Jul 2015 11:57:03 +0200
+
+libkcddb (4:14.12.2-1) experimental; urgency=medium
+
+  * Prepare Debian release.
+  * Bump Standards-Version to 3.9.6, no changes needed.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 20 Feb 2015 09:18:51 +0100
+
+libkcddb (4:14.12.2-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+  * Remove unstable from watch file, uscan fails with
+    remote site does not even have current version
+
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Tue, 10 Feb 2015 08:59:38 -0800
+
+libkcddb (4:14.12.0-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+  * Remove kdelibs5-dev depend version as there was not a new release.
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Mon, 15 Dec 2014 16:28:26 +0100
+
+libkcddb (4:14.11.97-0ubuntu1) vivid; urgency=medium
+
+  * New upstream RC release
+  * Fix syntax in debian/copyright
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 01 Dec 2014 18:03:49 +0100
+
+libkcddb (4:4.14.2-1) unstable; urgency=medium
+
+  * New upstream release (4.14.2).
+  * Update symbols files from buildds logs (4:4.14.0-1).
+  * Update symbols files.
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 20 Oct 2014 17:13:14 +0200
+
+libkcddb (4:4.14.0-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update symbols file with 4:4.13.3-1 buildds logs.
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 20 Aug 2014 19:55:59 +0200
+
+libkcddb (4:4.13.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Update symbols file.
+
+ -- Maximiliano Curia <maxy@debian.org>  Wed, 23 Jul 2014 13:19:00 +0200
+
+libkcddb (4:4.14.2-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <sgclark@kubuntu.org>  Fri, 10 Oct 2014 06:20:22 -0700
+
+libkcddb (4:4.14.1-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Mon, 22 Sep 2014 17:43:41 +0200
+
+libkcddb (4:4.14.0-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 20 Aug 2014 13:29:54 +0200
+
+libkcddb (4:4.13.97-0ubuntu1) utopic; urgency=medium
+
+  * New upstream beta release RC
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Fri, 01 Aug 2014 17:18:54 +0200
+
+libkcddb (4:4.13.95-0ubuntu1) utopic; urgency=medium
+
+  * New upstream beta release
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Wed, 30 Jul 2014 18:43:58 +0200
+
+libkcddb (4:4.13.90-0ubuntu1) utopic; urgency=medium
+
+  * New upstream beta release
+
+ -- Scarlett Clark <scarlett@scarlettgatelyclark.com>  Thu, 24 Jul 2014 23:34:18 +0200
+
+libkcddb (4:4.13.2-0ubuntu1) utopic; urgency=medium
+
+  [ Rohan Garg ]
+  * Merge with Debian, no remaining changes
+
+  [ Jonathan Riddell ]
+  * new upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 18 Jun 2014 12:05:32 +0100
+
+libkcddb (4:4.13.1-1) unstable; urgency=medium
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 16 May 2014 21:27:42 +0200
+
+libkcddb (4:4.13.0-0ubuntu1) trusty; urgency=medium
+
+  * New upstream KDE Software Compilation release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 10 Apr 2014 22:20:12 +0100
+
+libkcddb (4:4.12.97-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release candidate
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Wed, 02 Apr 2014 11:47:21 +0200
+
+libkcddb (4:4.12.95-0ubuntu1) trusty; urgency=medium
+
+  * New upstream beta release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Sun, 23 Mar 2014 12:47:05 +0100
+
+libkcddb (4:4.12.90-0ubuntu1) trusty; urgency=medium
+
+  * New upstream beta release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 19 Mar 2014 11:52:45 +0000
+
+libkcddb (4:4.12.3-2) unstable; urgency=medium
+
+  * Release to unstable
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 28 Apr 2014 12:23:55 +0200
+
+libkcddb (4:4.12.3-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Update symbols files.
+
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 04 Mar 2014 00:06:23 +0100
+
+libkcddb (4:4.12.3-0ubuntu1) trusty; urgency=medium
+
+  * New upstream bugfix release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Tue, 04 Mar 2014 21:08:14 +0100
+
+libkcddb (4:4.12.2-1) experimental; urgency=medium
+
+  * New upstream release.
+  * Bump kde-sc-dev-latest build dependency.
+
+ -- Maximiliano Curia <maxy@debian.org>  Mon, 10 Feb 2014 11:31:53 +0100
+
+libkcddb (4:4.12.2-0ubuntu1) trusty; urgency=medium
+
+  * New upstream bugfix release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Wed, 05 Feb 2014 00:19:19 +0000
+
+libkcddb (4:4.12.1-0ubuntu1) trusty; urgency=low
+
+  * New upstream bugfix release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Thu, 16 Jan 2014 08:33:38 +0000
+
+libkcddb (4:4.12.0-0ubuntu1) trusty; urgency=low
+
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 18 Dec 2013 17:32:59 +0000
+
+libkcddb (4:4.11.97-0ubuntu1) trusty; urgency=low
+
+  * New upstream RC release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 29 Nov 2013 13:31:42 +0000
+
+libkcddb (4:4.11.95-0ubuntu1) trusty; urgency=low
+
+  * New upstream beta release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Mon, 25 Nov 2013 18:28:36 +0100
+
+libkcddb (4:4.11.80-0ubuntu1) trusty; urgency=low
+
+  * New upstream beta release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Sat, 23 Nov 2013 17:53:07 +0100
+
+libkcddb (4:4.11.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * Bump Standards-Version to 3.9.5, no changes needed.
+  * Add autopkgtests.
+  * Add abi-compliance-checker info.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 17 Jan 2014 13:21:32 -0300
+
+libkcddb (4:4.11.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update build dependencies.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 08 Nov 2013 12:17:20 +0100
+
+libkcddb (4:4.11.2-1) experimental; urgency=low
+
+  * New upstream release.
+
+ -- Maximiliano Curia <maxy@debian.org>  Tue, 03 Sep 2013 20:19:45 +0200
+
+libkcddb (4:4.11.2-0ubuntu1) saucy; urgency=low
+
+  * New upstream bugfix release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 30 Sep 2013 14:45:43 +0100
+
+libkcddb (4:4.11.1-0ubuntu1) saucy; urgency=low
+
+  * New upstream bugfix release.
+
+ -- Howard Chan <smartboyhw@gmail.com>  Fri, 06 Sep 2013 22:34:44 +0100
+
+libkcddb (4:4.11.0-0ubuntu1) saucy; urgency=low
+
+  [ Howard Chan ]
+  * New upstream release
+
+  [ Jonathan Riddell ]
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 13 Aug 2013 23:50:16 +0100
+
+libkcddb (4:4.10.97-0ubuntu1) saucy; urgency=low
+
+  * New upstream RC 2 release
+  * New upstream RC 2 release
+  * New upstream RC 2 release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 26 Jul 2013 19:56:07 +0100
+
+libkcddb (4:4.10.95-0ubuntu1) saucy; urgency=low
+
+  [ Philip Muškovac ]
+  * New upstream release candidate
+
+  [ Rohan Garg ]
+  * New upstream RC release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Fri, 19 Jul 2013 12:33:17 +0000
+
+libkcddb (4:4.10.90-0ubuntu1) saucy; urgency=low
+
+  [ Michał Zając ]
+  * New upstream beta release
+
+  [ Howard Chan ]
+  * Fix the symbols files for libkcddb4.
+
+ -- Howard Chan <smartboyhw@gmail.com>  Fri, 28 Jun 2013 18:26:04 +0100
+
+libkcddb (4:4.10.80-0ubuntu1) saucy; urgency=low
+
+  [ Rohan Garg ]
+  * New upstream release
+
+  [ Philip Muškovac ]
+  * Update libkcddb4.symbols
+
+  [ Jonathan Riddell ]
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 21 Jun 2013 01:41:06 +0100
+
+libkcddb (4:4.10.5-1) unstable; urgency=low
+
+  * New upstream release.
+  * Update symbols.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 12 Jul 2013 09:16:34 +0200
+
+libkcddb (4:4.10.4-1) experimental; urgency=low
+
+  * New upstream release.
+  * Bump debhelper build-dep and compat to 9.
+  * Bump Standards-Version to 3.9.4.
+  * Update vcs fields.
+  * Add myself to uploaders.
+
+ -- Maximiliano Curia <maxy@debian.org>  Fri, 14 Jun 2013 08:26:21 +0200
+
+libkcddb (4:4.10.4-0ubuntu1) saucy-proposed; urgency=low
+
+  [ Rohan Garg ]
+  * New upstream bugfix release
+
+  [ Jonathan Riddell ]
+  * update symbols file
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Fri, 07 Jun 2013 00:45:27 +0100
+
+libkcddb (4:4.10.3-0ubuntu1) saucy; urgency=low
+
+  * New upstream release
+  * Merge with Debian
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Wed, 08 May 2013 16:09:38 +0000
+
+libkcddb (4:4.10.2-1) experimental; urgency=low
+
+  [ Pino Toscano ]
+  * Initial packaging.
+
+  [ Sune Vuorela ]
+  * Bump stuff to 4.10.
+  * Add myself to uploaders.
+  * Update symbols file.
+
+ -- Sune Vuorela <sune@debian.org>  Fri, 05 Apr 2013 21:46:28 +0000
+
+libkcddb (4:4.10.2-0ubuntu1) raring; urgency=low
+
+  * New upstream bugfix release
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Sun, 31 Mar 2013 14:31:05 +0200
+
+libkcddb (4:4.10.1-0ubuntu1) raring-proposed; urgency=low
+
+  * New upstream bugfix release
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Tue, 05 Mar 2013 16:41:58 +0000
+
+libkcddb (4:4.10.0-0ubuntu1) raring-proposed; urgency=low
+
+  * New upstream release
+
+ -- Rohan Garg <rohangarg@kubuntu.org>  Wed, 06 Feb 2013 12:06:48 +0000
+
+libkcddb (4:4.9.98-0ubuntu1) raring-proposed; urgency=low
+
+  * New upstream release candidate
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 18 Jan 2013 15:57:53 +0000
+
+libkcddb (4:4.9.97-0ubuntu1) raring; urgency=low
+
+  * New upstream release candidate
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Thu, 03 Jan 2013 22:19:39 +0100
+
+libkcddb (4:4.9.95-0ubuntu1) raring; urgency=low
+
+  * New upstream RC release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 18 Dec 2012 23:09:34 +0000
+
+libkcddb (4:4.9.90-0ubuntu1) raring-proposed; urgency=low
+
+  * New upstream beta release
+  * New upstream beta release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Fri, 07 Dec 2012 18:10:43 +0000
+
+libkcddb (4:4.9.80-0ubuntu1) raring; urgency=low
+
+  [ Jonathan Riddell ]
+  * New upstream beta release
+
+  [ Harald Sitter ]
+  * Drop install_docs.diff, applied upstream. No more patches remaining
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Mon, 19 Nov 2012 16:05:58 +0000
+
+libkcddb (4:4.9.3-0ubuntu1) raring; urgency=low
+
+  * New upstream release (LP: #1074747)
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Tue, 06 Nov 2012 22:42:54 +0100
+
+libkcddb (4:4.9.2-0ubuntu1) quantal-proposed; urgency=low
+
+  * New upstream bugfix release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Tue, 02 Oct 2012 15:34:12 +0100
+
+libkcddb (4:4.9.1-0ubuntu1) quantal; urgency=low
+
+  * New upstream release
+
+ -- Harald Sitter <apachelogger@ubuntu.com>  Mon, 10 Sep 2012 18:39:04 +0530
+
+libkcddb (4:4.9.0-0ubuntu1) quantal; urgency=low
+
+  * Use direct build-depends versions rather than kde-sc-dev-latest
+  * New upstream release
+  * New upstream release
+
+ -- Jonathan Riddell <jriddell@ubuntu.com>  Thu, 26 Jul 2012 17:13:40 +0100
+
+libkcddb (4:4.8.90-0ubuntu1) quantal; urgency=low
+
+  [ Felix Geyer ]
+  * New upstream beta release.
+
+  [ Jonathan Riddell ]
+  * Change build-dep to libmusicbrainz5
+  * Update symbols
+
+ -- Felix Geyer <debfx@ubuntu.com>  Mon, 11 Jun 2012 18:05:35 +0200
+
+libkcddb (4:4.8.80a-0ubuntu1) quantal; urgency=low
+
+  * Initial release.
+    - add install_docs.diff to install the kcddb KCM docs
+
+ -- Philip Muškovac <yofel@kubuntu.org>  Sat, 26 May 2012 17:05:59 +0200

@@ -1,0 +1,5 @@
+usr/lib/*/qt5/plugins/kcm_cddb.so
+usr/share/config.kcfg/libkcddb5.kcfg
+usr/share/doc/HTML/*/kcontrol/cddbretrieval5/
+usr/share/kservices5/libkcddb.desktop
+usr/share/locale/*/LC_MESSAGES/kcmcddb.mo
